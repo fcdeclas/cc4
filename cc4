@@ -48,8 +48,8 @@ public class RestaurantOrderingAlgorithm {
             double price = calculatePrice(choice, quantity);ctr++;
 
             // Step 9: Update totalItems and totalPrice
-            totalItems += quantity;
-            totalPrice += price;
+            totalItems += quantity;ctr++;
+            totalPrice += price;ctr++;
 
             // Step 10: Display the current order details
             System.out.println("Added to your order: " + quantity + " x Item " + choice + " = $" + price);ctr++;
