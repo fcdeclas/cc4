@@ -2,63 +2,67 @@ import java.util.Scanner;
 
 public class RestaurantOrderingAlgorithm {
 
+    public static int ctr = 0;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Restaurant Ordering System!");
 
         // Step 1: Display the menu
-        System.out.println("MENU:");
-        System.out.println("1. Adobo");
-        System.out.println("2. Sinigang na isda");
-        System.out.println("3. Pinikpikan");
-        System.out.println("4. Sisig");
+        System.out.println("MENU:");ctr++;
+        System.out.println("1. Adobo");ctr++;
+        System.out.println("2. Sinigang na isda");ctr++;
+        System.out.println("3. Pinikpikan");ctr++;
+        System.out.println("4. Sisig");ctr++;
 
         // Step 2: Initialize variables
         int totalItems = 0;
         double totalPrice = 0;
 
         // Step 3: Ask the user for the number of items to order
-        System.out.print(" Would you like to order? ");
-        int numberOfItems = scanner.nextInt();
+        System.out.print(" What would you like to order? ");ctr++;
+        int numberOfItems = scanner.nextInt();ctr++;
 
         // Step 4: Loop to process each item
-        for (int i = 1; i <= numberOfItems; i++) {
-            System.out.println("\nItem " + i + ":");
+        for (int i = 1; i <= numberOfItems; i++) {ctr++;ctr++;
+            System.out.println("\nItem " + i + ":");ctr++;
+            
 
             // Step 5: Ask the user to select an item
-            System.out.print("Enter the number corresponding to your choice: ");
-            int choice = scanner.nextInt();
+            System.out.print("Enter the number corresponding to your choice: ");ctr++;
+            int choice = scanner.nextInt();ctr++;
 
             // Step 6: Validate the choice using a conditional statement
-            if (choice < 1 || choice > 4) {
-                System.out.println("Invalid choice! Please select a valid item.");
+            if (choice < 1 || choice > 4) {ctr++;ctr++;
+            
+                System.out.println("Invalid choice! Please select a valid item.");ctr++;
                 i--; // Decrement i to repeat the current iteration
                 continue; // Skip the rest of the loop and start the next iteration
             }
 
             // Step 7: Ask the user for the quantity
-            System.out.print("Enter the quantity: ");
+            System.out.print("Enter the quantity: ");ctr++;
             int quantity = scanner.nextInt();
 
             // Step 8: Calculate the price based on the item and quantity
-            double price = calculatePrice(choice, quantity);
+            double price = calculatePrice(choice, quantity);ctr++;
 
             // Step 9: Update totalItems and totalPrice
             totalItems += quantity;
             totalPrice += price;
 
             // Step 10: Display the current order details
-            System.out.println("Added to your order: " + quantity + " x Item " + choice + " = $" + price);
+            System.out.println("Added to your order: " + quantity + " x Item " + choice + " = $" + price);ctr++;
         }
 
         // Display the final order summary
-        System.out.println("\nOrder Summary:");
-        System.out.println("Total Items: " + totalItems);
-        System.out.println("Total Price: $" + totalPrice);
-
+        System.out.println("\nOrder Summary:");ctr++;
+        System.out.println("Total Items: " + totalItems);ctr++;
+        System.out.println("Total Price: $" + totalPrice);ctr++;
         // Close the scanner
         scanner.close();
+        
+        System.out.println("Counter" + ctr);ctr++;
     }
 
     // Function to calculate the price based on the item and quantity
@@ -83,5 +87,10 @@ public class RestaurantOrderingAlgorithm {
         }
 
         return price * quantity;
+       
+        
     }
+
 }
+
+ 
